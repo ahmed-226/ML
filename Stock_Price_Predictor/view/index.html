@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/predictions.js" defer></script>
+    <title>Stock Price Predictor</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin-top: 30px; padding: 0; display: flex; flex-direction: column; align-items:center; justify-content: flex-start ; min-height: 100vh; background-color: #f4f4f4;">
+    <div style="text-align: center;">
+        <h1 style="margin-bottom: 20px;">Stock Price Predictor</h1>
+        <form id="predictionForm" style="display: grid; gap: 10px; max-width: 600px; margin: 0 auto;">
+            
+            <div style="display: flex;width: 600px;justify-content: space-between;" >
+                <div style="display: flex;align-items: center;">
+                    <label for="Low" style="display: block; margin-bottom: 5px;margin-right: 5px;">Open </label>
+                    <input type="text" name="Open" id="Open" style="width: 200px; padding: 8px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 4px;">
+                </div>
+                
+                <div style="display: flex;align-items: center;">
+
+                    <label for="Low" style="display: block; margin-bottom: 5px;margin-right: 5px;">High </label>
+                    <input type="text" name="High" id="High" style="width: 200px; padding: 8px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 4px;">
+                </div>
+
+            </div>
+            
+            <div style="display: flex;width: 600px;justify-content: space-between;" >
+
+                <div style="display: flex;align-items: center;">
+
+                    <label for="Low" style="display: block; margin-bottom: 5px;margin-right: 5px;">Low </label>
+                    <input type="text" name="Low" id="Low" style="width: 200px; padding: 8px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 4px;">
+                </div>
+                <div style="display: flex;align-items: center;">
+
+                    <label for="Low" style="display: block; margin-bottom: 5px;margin-right: 5px;">Volume </label>
+                    <input type="text" name="Volume" id="Volume" style="width: 200px; padding: 8px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 4px;">
+                </div>
+            </div>
+            
+            <input type="submit" value="Predict" style="background-color: #007BFF; color: white; border: none; padding: 10px; border-radius: 4px; cursor: pointer; font-size: 16px;">
+        </form>
+        <div id="predictionResult" style="margin-top: 20px;"></div>
+    </div>
+</body>
+</html>
