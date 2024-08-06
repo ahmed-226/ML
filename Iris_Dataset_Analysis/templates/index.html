@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin-top: 30px; padding: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-height: 100vh; background-color: #f4f4f4;">
+    <div style="text-align: center;">
+        <h1 style="margin-bottom: 20px;">Iris Flower Predictor</h1>
+        <form action="/predict" method="post" style="max-width: 700px; margin: 0 auto;">
+            <div style="display: flex;margin-bottom: 10px;">
+            <div style="display: flex; width: 600px; justify-content: center;">
+                <div style="display: flex; flex-direction: column;align-items: center;margin: 10px;">
+                    <label for="sepal_length" style="display: block; margin-bottom: 5px; margin-right: 5px;">Sepal Length:</label>
+                    <label for="sepal_width" style="display: block; margin-top: 20px; margin-right: 5px;">Sepal Width:</label>
+                </div>
+                <div style="display: flex; flex-direction: column;align-items: center;">
+                    <input type="text" id="sepal_length" name="sepal_length" style="width: 200px; padding: 8px;margin: 5px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 4px;" required>
+                    <input type="text" id="sepal_width" name="sepal_width" style="width: 200px; padding: 8px;margin: 5px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 4px;" required>
+                </div>
+            </div>
+            <div style="display: flex; width: 600px; justify-content: center;">
+                <div style="display: flex; flex-direction: column;align-items: center;margin: 10px;">
+                    <label for="petal_length" style="display: block; margin-bottom: 5px; margin-right: 5px;">Petal Length:</label>
+                    <label for="petal_width" style="display: block; margin-top: 20px; margin-right: 5px;">Petal Width:</label>
+                </div>
+                <div style="display: flex; flex-direction: column;align-items: center;">
+                    <input type="text" id="petal_length" name="petal_length" style="width: 200px; padding: 8px;margin: 5px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 4px;" required>
+                    <input type="text" id="petal_width" name="petal_width" style="width: 200px; padding: 8px;margin: 5px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 4px;" required>
+                </div>
+            </div>
+        </div>
+            <input type="submit" value="Predict" style="background-color: #007BFF; color: white; border: none; padding: 10px; border-radius: 4px; cursor: pointer; font-size: 16px;">
+        </form>
+        <div id="predictionResult" style="margin-top: 20px;">
+            <h2>Prediction Result: {{ result }}</h2>
+        </div>
+    </div>
+</body>
+</html>
